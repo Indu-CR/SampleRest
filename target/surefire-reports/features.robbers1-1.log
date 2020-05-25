@@ -1,0 +1,17 @@
+15:40:29.037 request:
+1 > GET http://localhost:8093/v2/api-docs
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8093
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/11.0.6)
+
+15:40:29.082 response time in milliseconds: 38.85
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 25 May 2020 10:10:29 GMT
+1 < Keep-Alive: timeout=60
+1 < Transfer-Encoding: chunked
+{"swagger":"2.0","info":{"description":"Api Documentation","version":"1.0","title":"Api Documentation","termsOfService":"urn:tos","contact":{},"license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0"}},"host":"localhost:8093","basePath":"/","tags":[{"name":"professor-the-controller","description":"Professor The Controller"}],"paths":{"/api/robber":{"post":{"tags":["professor-the-controller"],"summary":"addRobber","operationId":"addRobberUsingPOST","consumes":["application/json"],"produces":["*/*"],"parameters":[{"in":"body","name":"robber","description":"robber","required":true,"schema":{"$ref":"#/definitions/Robber"}}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/Robber"}},"201":{"description":"Created"},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}},"/api/robbers":{"get":{"tags":["professor-the-controller"],"summary":"getRobbers","operationId":"getRobbersUsingGET","produces":["*/*"],"responses":{"200":{"description":"OK","schema":{"type":"array","items":{"$ref":"#/definitions/Robber"}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}}},"definitions":{"Robber":{"type":"object","properties":{"country":{"type":"string"},"id":{"type":"integer","format":"int32"},"name":{"type":"string"}},"title":"Robber"}}}
+
+

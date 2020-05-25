@@ -1,0 +1,170 @@
+<testsuite failures="0" name="features/robbers.feature" skipped="0" tests="5" time="3.887955">
+  <testcase classname="features.robbers" name="GET operation to list all the robbers resources" time="1.147575">
+    <system-out>* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint1 ...................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match response != null ................................................ passed
+* def data = response ..................................................... passed
+Then print "Response data:", data ......................................... passed
+* def returnedData1 = call func1 data ..................................... passed
+Then print "Number of Users:", returnedData1 .............................. passed
+* def returnedData2 = call func2 data ..................................... passed
+Then print "User id at 4:", returnedData2 ................................. passed
+* def abc = ............................................................... passed
+* def validation = read('result.json') .................................... passed
+* match validation == '#[] abc' ........................................... passed</system-out>
+  </testcase>
+  <testcase classname="features.robbers" name="GET operation to list a robber" time="0.914107">
+    <system-out>* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint1 ...................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match response != null ................................................ passed
+* def data = response ..................................................... passed
+Then print "Response data:", data ......................................... passed
+* def returnedData1 = call func1 data ..................................... passed
+Then print "Number of Users:", returnedData1 .............................. passed
+* def returnedData2 = call func2 data ..................................... passed
+Then print "User id at 4:", returnedData2 ................................. passed
+* def abc = ............................................................... passed
+* def validation = read('result.json') .................................... passed
+* match validation == '#[] abc' ........................................... passed
+* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint2 ...................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="features.robbers" name="POST Operation to create a new robber" time="0.891478">
+    <system-out>* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint1 ...................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match response != null ................................................ passed
+* def data = response ..................................................... passed
+Then print "Response data:", data ......................................... passed
+* def returnedData1 = call func1 data ..................................... passed
+Then print "Number of Users:", returnedData1 .............................. passed
+* def returnedData2 = call func2 data ..................................... passed
+Then print "User id at 4:", returnedData2 ................................. passed
+* def abc = ............................................................... passed
+* def validation = read('result.json') .................................... passed
+* match validation == '#[] abc' ........................................... passed
+* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint2 ...................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint3 ...................................................... passed
+And request {"id" : 6, "name" : "Helsinki", "country" : "Finland"} ........ passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* def data1 = response .................................................... passed
+Then print "Response data:", data1 ........................................ passed
+And match data1 == {"id" : 6, "name" : "Helsinki", "country" : "Finland"} . passed</system-out>
+  </testcase>
+  <testcase classname="features.robbers" name="PUT Operaiton to verify that the robbers information is successfully updated" time="0.897064">
+    <system-out>* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint1 ...................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match response != null ................................................ passed
+* def data = response ..................................................... passed
+Then print "Response data:", data ......................................... passed
+* def returnedData1 = call func1 data ..................................... passed
+Then print "Number of Users:", returnedData1 .............................. passed
+* def returnedData2 = call func2 data ..................................... passed
+Then print "User id at 4:", returnedData2 ................................. passed
+* def abc = ............................................................... passed
+* def validation = read('result.json') .................................... passed
+* match validation == '#[] abc' ........................................... passed
+* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint2 ...................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint3 ...................................................... passed
+And request {"id" : 6, "name" : "Helsinki", "country" : "Finland"} ........ passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* def data1 = response .................................................... passed
+Then print "Response data:", data1 ........................................ passed
+And match data1 == {"id" : 6, "name" : "Helsinki", "country" : "Finland"} . passed
+* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint4 ...................................................... passed
+And request {"id" : 2, "name" : "Rio de Janeiro", "country" : "Brazil"} ... passed
+When method PUT ........................................................... passed
+Then status 200 ........................................................... passed
+And print 'Updated response is:', response ................................ passed
+And match response == {"id" : 2, "name" : "Rio de Janeiro", "country" : "Brazil"} . passed</system-out>
+  </testcase>
+  <testcase classname="features.robbers" name="DELETE Operation to verify that the robber information is successfully deleted" time="0.037732">
+    <system-out>* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint1 ...................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match response != null ................................................ passed
+* def data = response ..................................................... passed
+Then print "Response data:", data ......................................... passed
+* def returnedData1 = call func1 data ..................................... passed
+Then print "Number of Users:", returnedData1 .............................. passed
+* def returnedData2 = call func2 data ..................................... passed
+Then print "User id at 4:", returnedData2 ................................. passed
+* def abc = ............................................................... passed
+* def validation = read('result.json') .................................... passed
+* match validation == '#[] abc' ........................................... passed
+* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint2 ...................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint3 ...................................................... passed
+And request {"id" : 6, "name" : "Helsinki", "country" : "Finland"} ........ passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* def data1 = response .................................................... passed
+Then print "Response data:", data1 ........................................ passed
+And match data1 == {"id" : 6, "name" : "Helsinki", "country" : "Finland"} . passed
+* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint4 ...................................................... passed
+And request {"id" : 2, "name" : "Rio de Janeiro", "country" : "Brazil"} ... passed
+When method PUT ........................................................... passed
+Then status 200 ........................................................... passed
+And print 'Updated response is:', response ................................ passed
+And match response == {"id" : 2, "name" : "Rio de Janeiro", "country" : "Brazil"} . passed
+* url baseURI ............................................................. passed
+* def func1 = ............................................................. passed
+* def func2 = ............................................................. passed
+Given path endpoint5 ...................................................... passed
+When method DELETE ........................................................ passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

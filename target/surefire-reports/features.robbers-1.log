@@ -1,0 +1,51 @@
+15:40:29.037 request:
+1 > GET http://localhost:8093/api/robbers
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8093
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/11.0.6)
+
+15:40:29.080 response time in milliseconds: 39.75
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 25 May 2020 10:10:29 GMT
+1 < Keep-Alive: timeout=60
+1 < Transfer-Encoding: chunked
+[{"id":1,"name":"Japan","country":"Tokyo"},{"id":2,"name":"Rio de Janeiro","country":"Brazil"},{"id":3,"name":"Kenya","country":"Nairobi"},{"id":4,"name":"Colorado","country":"Denver"},{"id":5,"name":"Russia","country":"Moscow"}]
+
+15:40:29.113 [print] Response data: [
+  {
+    "id": 1,
+    "name": "Japan",
+    "country": "Tokyo"
+  },
+  {
+    "id": 2,
+    "name": "Rio de Janeiro",
+    "country": "Brazil"
+  },
+  {
+    "id": 3,
+    "name": "Kenya",
+    "country": "Nairobi"
+  },
+  {
+    "id": 4,
+    "name": "Colorado",
+    "country": "Denver"
+  },
+  {
+    "id": 5,
+    "name": "Russia",
+    "country": "Moscow"
+  }
+]
+
+15:40:29.184 [print] Number of Users: 5
+15:40:29.349 [print] User id at 4: {
+  "id": 4,
+  "name": "Colorado",
+  "country": "Denver"
+}
+

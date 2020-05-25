@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"ForkJoinPool-1-worker-7"},{"id":2,"content":"ForkJoinPool-1-worker-5"},{"id":3,"content":"ForkJoinPool-1-worker-9"},{"id":4,"content":"ForkJoinPool-1-worker-11"},{"id":5,"content":"ForkJoinPool-1-worker-3"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"robbers[1:26]","start":1345,"end":2534,"title":"robbers[1:26] 1345-2534"},{"id":2,"group":2,"content":"robbers[2:51]","start":1330,"end":2273,"title":"robbers[2:51] 1330-2273"},{"id":3,"group":3,"content":"robbers[3:57]","start":1346,"end":2264,"title":"robbers[3:57] 1346-2264"},{"id":4,"group":4,"content":"robbers[4:67]","start":1346,"end":2264,"title":"robbers[4:67] 1346-2264"},{"id":5,"group":5,"content":"robbers[5:76]","start":2262,"end":2301,"title":"robbers[5:76] 2262-2301"},{"id":6,"group":5,"content":"robbers1[1:6]","start":1347,"end":2245,"title":"robbers1[1:6] 1347-2245"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

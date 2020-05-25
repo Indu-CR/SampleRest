@@ -1,0 +1,9 @@
+<testsuite failures="0" name="features/robbers1.feature" skipped="0" tests="1" time="0.880605">
+  <testcase classname="features.robbers1" name="GET operation to list the swagger json resouces" time="0.880605">
+    <system-out>* url baseURI1 ............................................................ passed
+Given path endpoint6 ...................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match response != null ................................................ passed</system-out>
+  </testcase>
+</testsuite>

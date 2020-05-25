@@ -1,0 +1,26 @@
+15:40:29.038 request:
+1 > PUT http://localhost:8093/api/robber/2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 51
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8093
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/11.0.6)
+{"id":2,"name":"Rio de Janeiro","country":"Brazil"}
+
+15:40:29.080 response time in milliseconds: 38.45
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 25 May 2020 10:10:29 GMT
+1 < Keep-Alive: timeout=60
+1 < Transfer-Encoding: chunked
+{"id":2,"name":"Rio de Janeiro","country":"Brazil"}
+
+15:40:29.110 [print] Updated response is: {
+  "id": 2,
+  "name": "Rio de Janeiro",
+  "country": "Brazil"
+}
+
+

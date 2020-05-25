@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Japan",
+    "country": "Tokyo"
+  },
+  {
+    "id": 2,
+    "name": "Brazil",
+    "country": "Rio"
+  },
+  {
+    "id": 3,
+    "name": "Kenya",
+    "country": "Nairobi"
+  },
+  {
+    "id": 4,
+    "name": "Colorado",
+    "country": "Denver"
+  },
+  {
+    "id": 5,
+    "name": "Russia",
+    "country": "Moscow"
+  }
+]
